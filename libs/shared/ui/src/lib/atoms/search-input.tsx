@@ -1,8 +1,6 @@
 import { useNavigate } from 'react-router-dom'
 import styled from 'styled-components'
-import { KeyboardEvent, useState } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
-import { setSearch } from '../../../../../store/src/lib/pokemon/search/search.state'
+import { KeyboardEvent } from 'react'
 
 const StyledInput = styled.input`
   /* fallback for old browsers */
@@ -30,7 +28,6 @@ const StyledInput = styled.input`
 
 export function SearchInput() {
   const navigate = useNavigate()
-  const dispatch = useDispatch()
 
   const _handleOnEnterPressed = (event: KeyboardEvent<HTMLInputElement>) => {
     if (event.code !== 'Enter') {
@@ -40,7 +37,6 @@ export function SearchInput() {
     const value: string = (event.target as HTMLInputElement).value
 
     navigate(`?search?=${encodeURIComponent(value)}`)
-    dispatch(setSearch(value))
   }
 
   return (

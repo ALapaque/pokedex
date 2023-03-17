@@ -1,4 +1,3 @@
-import '../../../../apps/application/index.css'
 import {withRouter} from 'storybook-addon-react-router-v6'
 
 export const parameters = {
