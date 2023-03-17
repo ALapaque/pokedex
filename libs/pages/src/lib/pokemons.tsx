@@ -2,10 +2,18 @@ import { PokemonById } from '@nx-pokemon/store'
 import { PokemonList } from '@nx-pokemon/shared/ui'
 
 export function Pokemons() {
-  // @ts-ignore
-  const ids = Array.apply(null, { length: 150 }).map(function (_, idx) {
-    return idx + 1
-  })
+  let ids = [];
+
+  while(ids.length < 150){
+    let randomNum = Math.floor(Math.random() * 1000) + 1;
+    if(ids.indexOf(randomNum) === -1){
+      ids.push(randomNum);
+    }
+  }
+
+  if (!ids) {
+    return <></>
+  }
 
   return (
     <PokemonList>
