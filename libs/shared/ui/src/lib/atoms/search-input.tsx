@@ -46,6 +46,7 @@ export default function SearchInput() {
     <StyledInput
       onKeyUp={_handleOnEnterPressed}
       type='search'
+      inputMode='search'
       placeholder='Search for a pokemon'
       name='search'
       className='input'
