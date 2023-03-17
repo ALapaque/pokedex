@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { Pokemon, Type, Stat } from '@nx-pokemon/shared/domain'
+import { useNavigate } from 'react-router-dom'
 
 const StyledCard = styled.article`
   max-width: 350px;
@@ -10,7 +11,7 @@ const StyledCard = styled.article`
   cursor: pointer;
 
   &:hover {
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
   }
 
   img {
@@ -81,12 +82,23 @@ interface Props {
 }
 
 export function PokemonCard({ pokemon }: Props) {
+  const navigate = useNavigate()
+
+  const _handleOnClick = () => {
+    navigate({
+      pathname: '/detail',
+      search: `?name=${pokemon.name}`
+    })
+  }
+
+
   if (!pokemon) {
     return <></>
   }
 
   return (
     <StyledCard
+      onClick={_handleOnClick}
       style={{
         background: `radial-gradient(circle at 50% 0%, var(--${pokemon.types[0].type.name}) 36%, rgb(255, 255, 255) 36%)`
       }}
@@ -94,7 +106,10 @@ export function PokemonCard({ pokemon }: Props) {
       <p className='hp'>
         <span>HP {pokemon.stats[0].base_stat}</span>
       </p>
-      <img src={pokemon.sprites.other?.['official-artwork']?.front_default} />
+      <img
+        alt={pokemon.name}
+        src={pokemon.sprites.other?.['official-artwork']?.front_default}
+      />
       <h2 className='poke-name'>{pokemon.name}</h2>
       <div className='types'>
         {pokemon.types.map((type: Type, index: number) => (

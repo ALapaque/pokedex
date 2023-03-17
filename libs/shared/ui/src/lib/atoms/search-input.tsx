@@ -1,19 +1,17 @@
-import { useNavigate, useSearchParams } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import styled from 'styled-components'
 import { KeyboardEvent } from 'react'
 
 const StyledInput = styled.input`
-  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #f7797d, #fbd786, #c6ffdd);
-  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #f7797d, #fbd786, #c6ffdd);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   background-repeat: no-repeat;
   border-radius: 20px;
   border: none;
   width: 100%;
   padding: 15px 20px;
   display: flex;
+  min-height: 3em;
   justify-content: center;
   align-items: center;
   text-align: center;

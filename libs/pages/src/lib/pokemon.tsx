@@ -1,18 +1,29 @@
-import styled from 'styled-components';
+import { PokemonByName } from '@nx-pokemon/store'
+import { useSearchParams } from 'react-router-dom'
+import styled from 'styled-components'
 
-/* eslint-disable-next-line */
-export interface PokemonProps {}
+const Container = styled.div`
+  height: calc(100lvh - 66px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`
 
-const StyledPokemon = styled.div`
-  color: pink;
-`;
+export default function Pokemon() {
+  const [ param ] = useSearchParams()
+  const name: string | null = param.get('name')
 
-export function Pokemon(props: PokemonProps) {
+  if (!name) {
+    return (
+      <Container>
+        <h1>This pokemon doesn't exist</h1>
+      </Container>
+    )
+  }
+
   return (
-    <StyledPokemon>
-      <h1>Welcome to Pokemon!</h1>
-    </StyledPokemon>
-  );
+    <Container>
+      <PokemonByName name={name} />
+    </Container>
+  )
 }
-
-export default Pokemon;

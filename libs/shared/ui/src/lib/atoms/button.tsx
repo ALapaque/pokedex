@@ -52,20 +52,20 @@ const StyledButton = styled.button`
     }
 
     &:nth-child(3) {
-      left: 1.8em;
+      left: .8em;
       top: 0;
       z-index: -1;
       background: #bf0fff;
     }
 
     &:nth-child(4) {
-      left: 4em;
+      left: 1.5em;
       top: -1em;
       background: #ff1b6b;
     }
 
     &:nth-child(5) {
-      left: 4.3em;
+      left: 2.3em;
       top: 1.6em;
       background: #0061ff;
     }
