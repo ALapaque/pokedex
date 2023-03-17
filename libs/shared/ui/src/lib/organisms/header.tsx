@@ -1,7 +1,8 @@
 /* eslint-disable-next-line */
-import styled from 'styled-components';
-import { NavLink } from 'react-router-dom';
-import SearchInput from '../atoms/search-input';
+import styled from 'styled-components'
+import { NavLink } from 'react-router-dom'
+import SearchInput from '../atoms/search-input'
+import Button from '../atoms/button'
 
 const StyledHeader = styled.header`
   position: sticky;
@@ -14,16 +15,18 @@ const StyledHeader = styled.header`
   gap: 20px;
   align-items: center;
   justify-content: flex-end;
-`;
+`
 
 export function Header() {
   return (
     <StyledHeader>
-      <NavLink to="/">Home</NavLink>
+      <NavLink to='/'>
+        <Button>🏠</Button>
+      </NavLink>
 
       <SearchInput />
     </StyledHeader>
-  );
+  )
 }
 
-export default Header;
+export default Header

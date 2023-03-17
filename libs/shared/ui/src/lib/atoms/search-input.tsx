@@ -12,7 +12,7 @@ const StyledInput = styled.input`
   border-radius: 20px;
   border: none;
   width: 100%;
-  padding: 20px;
+  padding: 15px 20px;
   display: flex;
   justify-content: center;
   align-items: center;

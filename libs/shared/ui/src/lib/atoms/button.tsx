@@ -9,9 +9,8 @@ export interface ButtonProps {
 const StyledButton = styled.button`
   position: relative;
   font-family: inherit;
-  font-size: 18px;
   border-radius: 40em;
-  width: 8em;
+  min-width: 3em;
   height: 3em;
   z-index: 1;
   color: white;
