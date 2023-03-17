@@ -1,5 +1,5 @@
-import PokemonCard from '../molecules/pokemon-card';
 import { useGetPokemonByIdQuery } from '@nx-pokemon/shared/hooks';
+import { PokemonCard } from '@nx-pokemon/shared/ui'
 
 export interface Props {
   id: number;

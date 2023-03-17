@@ -1,5 +1,5 @@
 import type { Meta } from '@storybook/react'
-import { SearchInput } from './search-input'
+import SearchInput from './search-input'
 
 const Story: Meta<typeof SearchInput> = {
   component: SearchInput,

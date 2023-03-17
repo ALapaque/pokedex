@@ -26,7 +26,7 @@ const StyledInput = styled.input`
   }
 `
 
-export function SearchInput() {
+export default function SearchInput() {
   const navigate = useNavigate()
 
   const _handleOnEnterPressed = (event: KeyboardEvent<HTMLInputElement>) => {
@@ -49,5 +49,3 @@ export function SearchInput() {
     />
   )
 }
-
-export default SearchInput

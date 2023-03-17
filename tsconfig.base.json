@@ -18,6 +18,7 @@
       "@nx-pokemon/pages": ["libs/pages/src/index.ts"],
       "@nx-pokemon/shared/domain": ["libs/shared/domain/src/index.ts"],
       "@nx-pokemon/shared/hooks": ["libs/shared/hooks/src/index.ts"],
+      "@nx-pokemon/shared/mocks": ["libs/shared/mocks/src/index.ts"],
       "@nx-pokemon/shared/ui": ["libs/shared/ui/src/index.ts"],
       "@nx-pokemon/store": ["libs/store/src/index.ts"]
     }

@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction, SliceCaseReducers } from '@reduxjs/toolkit'
-import { Pokemon } from '../../../../../shared/domain/src/lib'
+import { Pokemon } from '@nx-pokemon/shared/domain'
 
 export type PokemonSearchStateType = {
   value: string,

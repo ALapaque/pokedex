@@ -1,4 +1,3 @@
-import styled from 'styled-components';
 import { Route, Routes } from 'react-router-dom';
 import { Pokemons } from '@nx-pokemon/pages';
 import { Header } from '@nx-pokemon/shared/ui';

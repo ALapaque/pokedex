@@ -1,6 +1,6 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 import PokeApiService from '../../../../shared/domain/src/lib/api/services/PokeApi.service';
-import { Pokemon } from '../../../../shared/domain/src/lib';
+import { Pokemon } from '@nx-pokemon/shared/domain';
 
 export const pokemonApi = createApi({
   reducerPath: 'pokemonApi',

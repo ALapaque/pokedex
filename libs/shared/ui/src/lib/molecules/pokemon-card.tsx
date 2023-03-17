@@ -1,11 +1,10 @@
 import styled from 'styled-components';
-// @ts-ignore
 import { Pokemon, Type, Stat } from '@nx-pokemon/shared/domain';
 
 const StyledCard = styled.article`
+  max-width: 350px;
   border-radius: 10px;
-  padding: 20px;
-  padding-top: 0;
+  padding: 5px 20px 10px 20px;
   height: calc(550px - 20px);
   transition: all ease-in-out 500ms;
   cursor: pointer;
