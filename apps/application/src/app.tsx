@@ -1,5 +1,5 @@
 import { Route, Routes } from 'react-router-dom';
-import { Pokemons } from '@nx-pokemon/pages';
+import { Pokemons, Search } from '@nx-pokemon/pages';
 import { Header } from '@nx-pokemon/shared/ui';
 
 export default function App() {
@@ -8,7 +8,7 @@ export default function App() {
       <Header />
       <Routes>
         <Route index element={<Pokemons />} />
-        <Route path="/search" element={<></>} />
+        <Route path="/search" element={<Search />} />
       </Routes>
     </div>
   );

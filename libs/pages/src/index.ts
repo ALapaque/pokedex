@@ -1,2 +1,9 @@
-export * from './lib/pokemon';
-export * from './lib/pokemons';
+import Pokemon from "./lib/pokemon";
+import Pokemons from "./lib/pokemons";
+import Search from "./lib/search";
+
+export {
+  Pokemons,
+  Pokemon,
+  Search
+}

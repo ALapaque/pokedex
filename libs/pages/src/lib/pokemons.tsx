@@ -1,15 +1,9 @@
 import { PokemonById } from '@nx-pokemon/store'
 import { PokemonList } from '@nx-pokemon/shared/ui'
+import { useGetRandomArrayOfNumber } from '@nx-pokemon/shared/hooks'
 
 export function Pokemons() {
-  let ids = [];
-
-  while(ids.length < 150){
-    let randomNum = Math.floor(Math.random() * 1000) + 1;
-    if(ids.indexOf(randomNum) === -1){
-      ids.push(randomNum);
-    }
-  }
+  const { array: ids } = useGetRandomArrayOfNumber({ amount: 100, maxRange: 1000 })
 
   if (!ids) {
     return <></>

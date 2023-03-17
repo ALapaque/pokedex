@@ -1,4 +1,4 @@
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useSearchParams } from 'react-router-dom'
 import styled from 'styled-components'
 import { KeyboardEvent } from 'react'
 
@@ -36,7 +36,10 @@ export default function SearchInput() {
 
     const value: string = (event.target as HTMLInputElement).value
 
-    navigate(`?search?=${encodeURIComponent(value)}`)
+    navigate({
+      pathname: '/search',
+      search: `?value=${value}`
+    })
   }
 
   return (
